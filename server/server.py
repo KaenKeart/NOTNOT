@@ -8,12 +8,12 @@ app = Flask(__name__)
 
 # โหลดโมเดล
 model = load_model(
-    "/Users/nathakornphikromsuk/Downloads/Acne-main 2/server/models/my_model.keras"
+    "models/my_model.keras"
 )
 print("Model loaded successfully.")
 
 # กำหนดชื่อระดับการทำนาย
-class_names = ["ไม่มีสิว", "สิวระดับต่ำ", "สิวระดับปานกลาง", "สิวระดับสูง"]
+class_names = ["สิวระดับต่ำ", "สิวระดับปานกลาง", "สิวระดับสูง"]
 
 
 @app.route("/predict", methods=["POST"])
